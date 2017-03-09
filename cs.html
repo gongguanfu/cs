@@ -25,17 +25,20 @@
             width: 100%;
             height: 40px;
             background-color: red;
-            -webkit-flex-shrink:0;
+            -webkit-flex-shrink: 0 0 auto;
         }
         .box_cont{
             background-color: blue;
             -webkit-flex: 1 1 auto;
+            height: -webkit-calc(100% - 40px);
+            height: calc(100% - 40px);
+            overflow-y: scroll;
+
         }
         .cont_inner{
             background-color: green;
-            height: -webkit-calc(100% - 40px);
-            height: calc(100% - 40px);
-            -webkit-flex-shrink: 0 0 auto;
+            height: 200%;
+            
         }
 
     </style>
