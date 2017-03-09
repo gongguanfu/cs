@@ -29,14 +29,13 @@
         }
         .box_cont{
             background-color: blue;
-           
-
-            -webkit-flex-shrink:1;
+            -webkit-flex: 1 1 auto;
         }
         .cont_inner{
             background-color: green;
-            height: 6000px;
-            -webkit-flex-shrink:0;
+            height: -webkit-calc(100% - 40px);
+            height: calc(100% - 40px);
+            -webkit-flex-shrink: 0 0 auto;
         }
 
     </style>
