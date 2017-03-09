@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <title>测试</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    
+    <title>Document</title>
+    <style>
+        html,body{
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            font-size: 15px;
+        }
+        .box_wrap{
+            width: 100%;
+            height: 100%;
+            display: -webkit-flex; 
+            display: flex;
+            flex-direction:column;
+            
+        }
+        .box_ad{
+            width: 100%;
+            height: 40px;
+            background-color: red;
+            -webkit-flex-shrink:0;
+        }
+        .box_cont{
+            background-color: blue;
+           
+
+            -webkit-flex-shrink:1;
+        }
+        .cont_inner{
+            background-color: green;
+            height: 6000px;
+            -webkit-flex-shrink:0;
+        }
+
+    </style>
+</head>
+<div class="box_wrap">
+    <div class="box_ad">可有可无广告</div>
+    <div class="box_cont"><div class="cont_inner">自适应内容</div></div>
+</div>
+
+
+
+
+
+
+<body>
+<script type="text/javascript">
+var u = navigator.userAgent;
+var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
+var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+
+window.onload = function(){
+
+    if(isAndroid) {
+        document.querySelector('html').className = 'html_android';
+    }
+
+    if(isiOS) {
+        document.querySelector('html').className = 'html_ios';
+    }
+
+};
+
+</script>
+
+</body>
+</html>
